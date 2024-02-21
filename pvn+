@@ -1,0 +1,9 @@
+pvn = 1.21
+#sok=1.5 0bez pvn
+#sir=3 bez pvn
+sok = 1.50
+sokPvn = sok * pvn
+sir = 3.00
+sirPvn = sir * pvn
+
+print(sirPvn,"<==sirPvn",sokPvn, "<==sokPvn")
