@@ -1,0 +1,60 @@
+import random
+import os
+import re
+def chek_play_status():
+    valid_response = ["yes","no"]
+    while True:
+        try:
+            response = input("do you wish play a game yes or no")
+            if response.lower() not in valid_response:
+                raise ValueError("yes or no only")
+            
+            if response.lower() == "yes":
+                return True
+            
+            else:
+                os.system("cls" if os.name == "nt" else "clear")
+                print("thenks for play ")
+                exit()
+        except ValueError as err:
+            print(err)
+
+def play_rps():
+    play = True
+    while play:
+        os.system("cls" if os.name == "nt" else 'clear')
+        print("")
+        print("rock , paper, scissors")
+
+        user_choice = input('choos weapon' ' [R]ock,[P]apire,[S]cissors: ')
+        
+        if not re.match("[SsRrPp]", user_choice):
+            print("choose")
+            print(' [R]ock,[P]apire,[S]...')
+            continue
+
+        print(f"f*ck you choos: {user_choice} ")
+
+        choices = ['R','P','S']
+        rps_choice = random.choice(choices)
+
+        print(f'i chus{rps_choice}')
+
+        if rps_choice == user_choice.upper():
+            print('drow')
+            play = chek_play_status()
+        elif  rps_choice == 'R' and user_choice.upper() == 'S':
+            print('rock better')
+            play = chek_play_status()
+        elif  rps_choice == 'S' and user_choice.upper() == 'P':
+            print('S is better')
+            play = chek_play_status()   
+        elif  rps_choice == 'P' and user_choice.upper() == 'R':
+            print('papir is batter')
+            play = chek_play_status()
+        else:
+            print("you win")
+            play = chek_play_status()
+
+if __name__ == '__main__':
+    play_rps()
