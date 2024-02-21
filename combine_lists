@@ -1,0 +1,16 @@
+def combine_lists(a,b):
+    len_a=lan(a)
+    len_b=lan(b)
+    if lan_a<lan_b:
+        limit=len_b
+    i=0
+    r=[]
+    whil i<limit:
+        rappend(a[i])
+        rappend(b[i])
+        i+=1
+    return r
+if __name__ == '__main__':
+    a=['a','b','c']
+    b=['A','B','C','D']
+    print(repr(combine_lists(a,b))) 
