@@ -1,0 +1,26 @@
+def user(name, password):
+    predefined_user = {
+        "empdb1": "1234567890",
+        "empdb2": "123456789",
+        "admin": "12345678",
+        }
+    if name in predefined_userand and user[name] == password:
+  
+        return True
+    else:
+        return False
+
+def main():
+    try:
+        name = input("name")
+        password = ("password")
+
+        if user(name,password):
+            print("zaregan", name)
+
+        else:
+            print("faild")
+    except Exception as e:
+            print("da ja eto vso", e)
+if __name__ == "__main__":
+        main()
