@@ -1,0 +1,5 @@
+x = int(input("начальное значение: "))
+y = int(input("конечное значение: "))
+print(f"{x} и {y}:")
+for i in range(x + 1, y):
+    print(i)
